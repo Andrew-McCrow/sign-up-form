@@ -1,6 +1,6 @@
 :root {
     --primary-color: white;
-    --secondary-color: #f44336;
+    --secondary-color: #596D48;
     --font-family: 'Arial, sans-serif';
     --input-border-color: #ccc;
     --input-focus-border-color: var(--primary-color);
@@ -62,8 +62,10 @@ h1 {
 
 .overlay {
   width: 100%;
+  height: 10%;
   background: rgba(0, 0, 0, 0.35); /* transparency */
   padding: 24px 0;
+  overflow: hidden;
 }
 
 /* Center content inside strip */
@@ -71,10 +73,17 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
+  max-width: 100%;
+  max-height: 100%;
   gap: 18px;
 }
-
-
+.logo {
+    max-width: 48px;
+  max-height: 48px;
+  width: auto;
+  height: auto;
+  flex-shrink: 0; /* prevent logo from distorting */
+}
 
 /* ODIN text */
 .brand-text {
@@ -83,4 +92,21 @@ h1 {
   font-weight: 700;
   letter-spacing: 6px;
   text-transform: uppercase;
+   /* 🔑 Prevent text from breaking layout */
+  max-width: 100%;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.button {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
 }
