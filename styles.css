@@ -1,0 +1,86 @@
+:root {
+    --primary-color: white;
+    --secondary-color: #f44336;
+    --font-family: 'Arial, sans-serif';
+    --input-border-color: #ccc;
+    --input-focus-border-color: var(--primary-color);
+    --button-hover-color: #45a049;
+}       
+
+html, body {
+  height: 100%;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}               
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    margin: 50px auto;
+    width: 300px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}   
+
+h1 {
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.container {
+    display: flex;
+    min-height: 100vh; /* make the flex row span the full viewport */
+}
+
+.border {
+    background-color: black;
+    flex: .2 1 0%;
+}
+
+.image-container {
+    text-align: center;
+    background-image: url('images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh; /* ensure the image column fills vertically */
+    flex: 1 1 0%;
+    align-items: center;
+    justify-content: flex-start; /* keep overlay on the left */
+}
+
+.form-container {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    flex: 1.7 1 0%;
+}
+
+.overlay {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.35); /* transparency */
+  padding: 24px 0;
+}
+
+/* Center content inside strip */
+.brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+}
+
+
+
+/* ODIN text */
+.brand-text {
+  color: #fff;
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+}
